@@ -1,7 +1,7 @@
 .container {
   background-color: aliceblue;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 16px;
   margin-bottom: 20px;
 }

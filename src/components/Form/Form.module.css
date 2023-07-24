@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  background-color: aliceblue;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 2px;
+  margin: 50px;
+  width: 350px;
+}
+
+.formulario {
+  border-radius: 10px 10px 10px 10px;
+}
+
+.buttonlogin {
+  border-radius: 0 10px 10px 0;
+  border-color: aqua;
+  color: aqua;
+  background-color: steelblue;
+}
+
+.buttonlogin:hover {
+  color: black;
+  background-color: rgba(0, 255, 255, 0.6);
+  cursor: pointer;
+}
