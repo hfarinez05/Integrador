@@ -5,3 +5,29 @@
   padding: 16px;
   margin-bottom: 20px;
 }
+
+.homeButton {
+  border-radius: 0 10px 10px 0;
+  border-color: aqua;
+  color: aqua;
+  background-color: steelblue;
+}
+
+.homeButton:hover {
+  color: black;
+  background-color: rgba(0, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.aboutButton {
+  border-radius: 0 10px 10px 0;
+  border-color: aqua;
+  color: aqua;
+  background-color: steelblue;
+}
+
+.aboutButton:hover {
+  color: black;
+  background-color: rgba(0, 255, 255, 0.6);
+  cursor: pointer;
+}

@@ -27,18 +27,25 @@ export default function Form(props) {
     );
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.login(userData);
+  };
+
   useEffect(() => {
     console.log(userData);
   }, [userData]);
 
   return (
-    <form className={styles.container}>
+    <form className={styles.container} onSubmit={handleSubmit}>
       <img
         src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/05/rick-morty-temporada-4-llegara-noviembre.jpg?tf=3840x"
         alt=""
       />
       <br />
-      {errors.userName ? <p>{errors.userName}</p> : null}
+      {errors.userName ? (
+        <p style={{ color: "red" }}>{errors.userName}</p>
+      ) : null}
       <label htmlFor="">Username: </label>
       <input
         className={styles.formulario}
@@ -48,7 +55,9 @@ export default function Form(props) {
         placeholder="Ingrese su email"
         onChange={handleChange}
       />
-      {errors.password ? <p>{errors.password}</p> : null}
+      {errors.password ? (
+        <p style={{ color: "red" }}>{errors.password}</p>
+      ) : null}
       <label htmlFor="">Password: </label>
       <input
         className={styles.formulario}
@@ -59,7 +68,9 @@ export default function Form(props) {
         onChange={handleChange}
       />
       <br />
-      <button className={styles.buttonlogin}>Login</button>
+      <button type="submit" className={styles.buttonlogin}>
+        Login
+      </button>
     </form>
   );
 }
